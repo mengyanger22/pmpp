@@ -30,8 +30,12 @@ int main() {
         printf("Memory clock rate:                  %.0f MHz\n", prop.memoryClockRate / 1000.0);
         printf("L2 cache size:                      %d bytes (%.1f KB)\n",
             prop.l2CacheSize, prop.l2CacheSize / 1024.0);
-        
-        
+        printf("global l1 cache supported:          %d\n", prop.globalL1CacheSupported);
+        printf("local l1 cache supported:           %d\n", prop.localL1CacheSupported);
+        printf("shared memory per SM:               %zu bytes (%.1f KB)\n", 
+            prop.sharedMemPerMultiprocessor, prop.sharedMemPerMultiprocessor / 1024.0);
+        printf("prop.sharedMemPerBlockOptin         %.1f KB\n", prop.sharedMemPerBlockOptin / 1024.0);
+        printf("prop.reservedSharedMemPerBlock      %.1f KB\n", prop.reservedSharedMemPerBlock / 1024.0);
     }
 
     return 0;
