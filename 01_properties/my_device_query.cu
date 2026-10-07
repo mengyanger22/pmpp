@@ -36,7 +36,7 @@ int main() {
             prop.sharedMemPerMultiprocessor, prop.sharedMemPerMultiprocessor / 1024.0);
         printf("prop.sharedMemPerBlockOptin         %.1f KB\n", prop.sharedMemPerBlockOptin / 1024.0);
         printf("prop.reservedSharedMemPerBlock      %.1f KB\n", prop.reservedSharedMemPerBlock / 1024.0);
-        prop.maxThreadsPerBlock
+        // prop.maxThreadsPerBlock
     }
 
     return 0;
