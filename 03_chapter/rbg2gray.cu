@@ -67,7 +67,7 @@ int main() {
     }
 
     printf("图像尺寸: %d x %d | block配置: (%d,%d) | grid配置: (%d,%d)\n",
-           width, height, blockSize.x, blockSize.y, gridSize.x, gridSize.y);
+            width, height, blockSize.x, blockSize.y, gridSize.x, gridSize.y);
     printf("CPU耗时: %.4f ms | GPU kernel耗时: %.4f ms | 加速比: %.2fx\n", cpuMs, gpuMs, cpuMs / gpuMs);
     printf("校验: %zu / %zu 像素超出容差 -> %s\n", mismatch, grayBytes, mismatch == 0 ? "通过" : "有差异(检查一下)");
 
@@ -77,7 +77,7 @@ int main() {
     free(gray_h_cpu); free(gray_h_gpu);
     cudaFree(rgb_d); cudaFree(gray_d);
 
-    printf("\n建议实验: 把图片换成非32整除的尺寸(比如500x333)，\n");
+    printf("\n建议实验: 把图片换成非32整除的尺寸(比如500x333), \n");
     printf("          观察边界条件(if (col < width && row < height))是否处理正确。\n");
 
     return 0;
